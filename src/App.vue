@@ -1,23 +1,31 @@
 <template>
+
   <div id="app">
-    <img src="./assets/logo.png">
+    <Navbar />
+    <Collections />
+    <TextContent />
     <router-view/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  import Navbar from "@/components/Navbar"
+  import Collections from "@/components/Collections"
+  import TextContent from "@/components/TextContent";
+  export default {
+    name: 'App',
+    components: {
+      Navbar,
+      Collections,
+      TextContent
+    },
+    comments: {
+      Navbar,
+      Collections
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
